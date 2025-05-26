@@ -1,0 +1,71 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "role": "Frontend Developer",
+    "cta": "View My Work"
+  },
+  "about": {
+    "title": "About Me",
+    "summary": "As a passionate Frontend Developer, I specialize in building responsive, user-friendly web applications. With a strong foundation in modern web technologies, I transform design concepts into seamless, interactive experiences. I focus on writing clean, efficient code while staying current with emerging trends and best practices in web development. I have strong time management skills and have worked as a freelancer for over a year, delivering quality projects on time and collaborating effectively with clients.",
+    "downloadCV": "Download CV"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "categories": {
+      "core": "Core Technologies",
+      "frameworks": "Frameworks & Libraries",
+      "styling": "UI/Styling",
+      "tools": "Tools & Platforms",
+      "design": "Design & User Experience"
+    }
+  },
+  "education": {
+    "title": "Education",
+    "degree": "Bachelor's Degree in Computer Science",
+    "school": "Thebes Academy",
+    "period": "2021–2025",
+    "gpa": "GPA: 2.7/4.0"
+  },
+  "languages": {
+    "title": "Languages",
+    "arabic": "Arabic: Native",
+    "english": "English: B2–C1"
+  },
+  "projects": {
+    "title": "Projects",
+    "viewLive": "View Live",
+    "viewCode": "View Code",
+    "calculatorDesc": "A clean, functional calculator with basic mathematical operations and a responsive design that works across all devices.",
+    "clockDesc": "A minimalist clock application displaying current time with a stylish interface and animated elements.",
+    "exchangeRateDesc": "Real-time currency exchange rate application with conversion features and historical rate tracking.",
+    "weatherDesc": "Weather forecasting application with current conditions, daily forecasts, and location-based weather data.",
+    "memesDesc": "A fun application for browsing and sharing popular memes with categorization and search functionality.",
+    "moviesDesc": "Comprehensive movies and series application with search, filtering, and detailed information about films and TV shows.",
+    "ecommerceDesc": "Full-featured e-commerce platform with product catalog, shopping cart, user authentication, checkout process, and includes an admin dashboard.",
+    "outpatientDesc": "An outpatient management system that allows patients to book and cancel appointments, chat with doctors,and includes an admin,doctor,patient dashboard and lets doctors manage daily schedules."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "submitButton": "Send Message",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "An error occurred. Please try again."
+  },
+  "footer": {
+    "copyright": "© 2025 Omar Emad. All rights reserved.",
+    "madeWith": "Made with React & Framer Motion"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
+  }
+}
