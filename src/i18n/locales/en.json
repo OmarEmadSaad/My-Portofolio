@@ -49,7 +49,8 @@
     "memesDesc": "A fun application for browsing and sharing popular memes with categorization and search functionality.",
     "moviesDesc": "Comprehensive movies and series application with search, filtering, and detailed information about films and TV shows.",
     "ecommerceDesc": "Full-featured e-commerce platform with product catalog, shopping cart, user authentication, checkout process, and includes an admin dashboard.",
-    "outpatientDesc": "An outpatient management system that allows patients to book and cancel appointments, chat with doctors,and includes an admin,doctor,patient dashboard and lets doctors manage daily schedules."
+    "outpatientDesc": "An outpatient management system that allows patients to book and cancel appointments, chat with doctors,and includes an admin,doctor,patient dashboard and lets doctors manage daily schedules.",
+    "marketDesc": "A comprehensive online marketplace built with Next.js, allowing users to browse products, add them to a cart, and complete purchases seamlessly. It includes an admin dashboard for adding, editing, or deleting products, viewing the total number of users, identifying the last user who logged in, and tracking the latest product added, with a responsive design and modern user interface."
   },
   "contact": {
     "title": "Contact Me",

@@ -88,12 +88,11 @@ const Hero = () => {
                 ease: "easeInOut",
               }}
             />
-
             <div className="relative h-64 w-64 md:h-80 md:w-80 overflow-hidden rounded-full border-4 border-white dark:border-gray-800 shadow-xl z-10">
               <img
                 src="/profile.jpeg"
                 alt="Omar Emad"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-[center_-20px]" // ✅ حرك الصورة للأعلى
               />
             </div>
           </div>
