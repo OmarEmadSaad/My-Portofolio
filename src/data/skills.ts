@@ -37,6 +37,11 @@ export const skills: Skill[] = [
     category: "frameworks",
   },
   {
+    name: "Redux Persist",
+    icon: "redux",
+    category: "frameworks",
+  },
+  {
     name: "Context API",
     icon: "context",
     category: "frameworks",
@@ -99,6 +104,11 @@ export const skills: Skill[] = [
   {
     name: "Postman",
     icon: "postman",
+    category: "tools",
+  },
+  {
+    name: "firebase",
+    icon: "firebase",
     category: "tools",
   },
   {

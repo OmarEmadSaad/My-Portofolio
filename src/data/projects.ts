@@ -26,6 +26,15 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    title: "Outpatient Management System",
+    description: "outpatientDesc",
+    imageUrl:
+      "https://images.unsplash.com/photo-1588451732612-a1a1809500c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8b3V0cGF0aWVudCUyMG1hbmFnbWVudHxlbnwwfHwwfHx8MA%3D%3D",
+    liveUrl: "https://osm-app.vercel.app",
+    technologies: ["React", "Tailwind CSS", "Json Server", "REST API"],
+  },
+  {
+    id: 4,
     title: "E-commerce App",
     description: "ecommerceDesc",
     imageUrl:
@@ -38,15 +47,6 @@ export const projects: Project[] = [
       "Tailwind CSS",
       "API Integration",
     ],
-  },
-  {
-    id: 4,
-    title: "Outpatient Management System",
-    description: "outpatientDesc",
-    imageUrl:
-      "https://images.unsplash.com/photo-1588451732612-a1a1809500c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8b3V0cGF0aWVudCUyMG1hbmFnbWVudHxlbnwwfHwwfHx8MA%3D%3D",
-    liveUrl: "https://osm-app.vercel.app",
-    technologies: ["React", "Tailwind CSS", "Json Server", "REST API"],
   },
   {
     id: 5,
