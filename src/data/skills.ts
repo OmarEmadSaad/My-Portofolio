@@ -47,6 +47,11 @@ export const skills: Skill[] = [
     category: "frameworks",
   },
   {
+    name: "TanStack (React-Query)",
+    icon: "React Query",
+    category: "frameworks",
+  },
+  {
     name: "React Router",
     icon: "router",
     category: "frameworks",

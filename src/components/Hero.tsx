@@ -1,26 +1,51 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
 
-  // Animation variants
+  // Typewriter logic
+  const textLines = [
+    t("hero.greeting"), // Hello, I'm
+    "Omar Emad",
+    t("hero.role"), // Frontend Developer
+  ];
+
+  const [currentText, setCurrentText] = useState(["", "", ""]);
+  const [lineIndex, setLineIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    if (lineIndex < textLines.length) {
+      if (charIndex < textLines[lineIndex].length) {
+        const timeout = setTimeout(() => {
+          setCurrentText((prev) => {
+            const newText = [...prev];
+            newText[lineIndex] += textLines[lineIndex][charIndex];
+            return newText;
+          });
+          setCharIndex(charIndex + 1);
+        }, 45);
+        return () => clearTimeout(timeout);
+      } else {
+        const nextLineTimeout = setTimeout(() => {
+          setLineIndex(lineIndex + 1);
+          setCharIndex(0);
+        }, 400);
+        return () => clearTimeout(nextLineTimeout);
+      }
+    }
+  }, [charIndex, lineIndex]);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      },
+      transition: { delayChildren: 0.3, staggerChildren: 0.2 },
     },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
   };
 
   return (
@@ -30,6 +55,7 @@ const Hero = () => {
       dir={isRTL ? "rtl" : "ltr"}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800 -z-10"></div>
+
       <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20">
         <motion.div
           className="w-full md:w-1/2 flex flex-col"
@@ -37,29 +63,28 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
+          {/* Line 1 */}
           <motion.p
-            variants={itemVariants}
-            className={`${isRTL ? "font-arabic" : ""} text-lg md:text-xl text-primary-600 dark:text-primary-400 font-medium mb-2`}
+            className={`${isRTL ? "font-arabic" : ""} text-lg md:text-xl text-primary-600 dark:text-primary-400 font-medium mb-2 min-h-[32px]`}
           >
-            {t("hero.greeting")}
+            {currentText[0]}
           </motion.p>
 
+          {/* Line 2 */}
           <motion.h1
-            variants={itemVariants}
-            className={`${isRTL ? "font-arabic" : ""} text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4`}
+            className={`${isRTL ? "font-arabic" : ""} text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 min-h-[50px]`}
           >
-            Omar Emad
+            {currentText[1]}
           </motion.h1>
 
+          {/* Line 3 */}
           <motion.h2
-            variants={itemVariants}
-            className={`${isRTL ? "font-arabic" : ""} text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-6`}
+            className={`${isRTL ? "font-arabic" : ""} text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-6 min-h-[40px]`}
           >
-            {t("hero.role")}
+            {currentText[2]}
           </motion.h2>
 
           <motion.a
-            variants={itemVariants}
             href="#projects"
             className={`${isRTL ? "font-arabic" : ""} inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 w-fit`}
             whileHover={{ scale: 1.05 }}
@@ -70,6 +95,7 @@ const Hero = () => {
           </motion.a>
         </motion.div>
 
+        {/* Image */}
         <motion.div
           className="w-full md:w-1/2 flex justify-center"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -85,14 +111,13 @@ const Hero = () => {
                 duration: 2,
                 repeat: Infinity,
                 repeatType: "reverse",
-                ease: "easeInOut",
               }}
             />
             <div className="relative h-64 w-64 md:h-80 md:w-80 overflow-hidden rounded-full border-4 border-white dark:border-gray-800 shadow-xl z-10">
               <img
                 src="/profile.jpeg"
                 alt="Omar Emad"
-                className="w-full h-full object-cover object-[center_-20px]" // ✅ حرك الصورة للأعلى
+                className="w-full h-full object-cover object-[center_-20px]"
               />
             </div>
           </div>
@@ -107,7 +132,6 @@ const Hero = () => {
         <a
           href="#about"
           className="p-2 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-shadow"
-          aria-label="Scroll Down"
         >
           <ArrowDown
             size={20}

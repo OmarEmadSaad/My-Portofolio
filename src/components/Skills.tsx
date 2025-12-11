@@ -162,6 +162,7 @@ function getIconComponent(iconName: string) {
     nextjs: <Layout size={28} />,
     redux: <CodeSquare size={28} />,
     context: <Layout size={28} />,
+    TanStack: <Layout size={28} />,
     router: <Layout size={28} />,
     tailwind: <Palette size={28} />,
     bootstrap: <Palette size={28} />,
