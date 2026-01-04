@@ -11,13 +11,21 @@ const Hero = () => {
   const textLines = [
     t("hero.greeting"), // Hello, I'm
     "Omar Emad",
-    t("hero.role"), // Frontend Developer
+    t("hero.role"), // Frontend & Mobile Developer
   ];
 
   const [currentText, setCurrentText] = useState(["", "", ""]);
   const [lineIndex, setLineIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
 
+  // Reset typewriter when language changes
+  useEffect(() => {
+    setCurrentText(["", "", ""]);
+    setLineIndex(0);
+    setCharIndex(0);
+  }, [i18n.language]);
+
+  // Typewriter effect
   useEffect(() => {
     if (lineIndex < textLines.length) {
       if (charIndex < textLines[lineIndex].length) {
@@ -27,18 +35,18 @@ const Hero = () => {
             newText[lineIndex] += textLines[lineIndex][charIndex];
             return newText;
           });
-          setCharIndex(charIndex + 1);
+          setCharIndex((c) => c + 1);
         }, 45);
         return () => clearTimeout(timeout);
       } else {
         const nextLineTimeout = setTimeout(() => {
-          setLineIndex(lineIndex + 1);
+          setLineIndex((l) => l + 1);
           setCharIndex(0);
         }, 400);
         return () => clearTimeout(nextLineTimeout);
       }
     }
-  }, [charIndex, lineIndex]);
+  }, [charIndex, lineIndex, textLines]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
