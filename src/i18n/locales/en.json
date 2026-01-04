@@ -41,6 +41,7 @@
   "projects": {
     "title": "Projects",
     "viewLive": "View Live",
+    "downloadNow": "Download Now",
     "viewCode": "View Code",
     "calculatorDesc": "A clean, functional calculator with basic mathematical operations and a responsive design that works across all devices.",
     "clockDesc": "A minimalist clock application displaying current time with a stylish interface and animated elements.",
@@ -50,7 +51,8 @@
     "moviesDesc": "Comprehensive movies and series application with search, filtering, and detailed information about films and TV shows.",
     "ecommerceDesc": "Full-featured e-commerce platform with product catalog, shopping cart, user authentication, checkout process, and includes an admin dashboard.",
     "outpatientDesc": "An outpatient management system that allows patients to book and cancel appointments, chat with doctors,and includes an admin,doctor,patient dashboard and lets doctors manage daily schedules.",
-    "marketDesc": "A comprehensive online marketplace built with Next.js, allowing users to browse products, add them to a cart, and complete purchases seamlessly. It includes an admin dashboard for adding, editing, or deleting products, viewing the total number of users, identifying the last user who logged in, and tracking the latest product added, with a responsive design and modern user interface."
+    "marketDesc": "A comprehensive online marketplace built with Next.js, allowing users to browse products, add them to a cart, and complete purchases seamlessly. It includes an admin dashboard for adding, editing, or deleting products, viewing the total number of users, identifying the last user who logged in, and tracking the latest product added, with a responsive design and modern user interface.",
+    "goodNewsDesc": "A mobile news reader app built with React Native and Expo, featuring real-time headlines from NewsAPI, favorites management, and smooth navigation with tabs."
   },
   "contact": {
     "title": "Contact Me",

@@ -26,6 +26,22 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    title: "Good News App",
+    description: "goodNewsDesc",
+    imageUrl:
+      "https://images.pexels.com/photos/4843087/pexels-photo-4843087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    downloadNow: "https://expo.dev/artifacts/eas/2PcYLXf8xHqSYNjhtqDMCK.apk", // ← نقلت الـ APK هنا للـ download
+    technologies: [
+      "React Native",
+      "Expo",
+      "Axios",
+      "Zustand",
+      "Tailwind CSS",
+      "Expo Router",
+    ],
+  },
+  {
+    id: 4,
     title: "Outpatient Management System",
     description: "outpatientDesc",
     imageUrl:
@@ -34,7 +50,7 @@ export const projects: Project[] = [
     technologies: ["React", "Tailwind CSS", "Json Server", "REST API"],
   },
   {
-    id: 4,
+    id: 5,
     title: "E-commerce App",
     description: "ecommerceDesc",
     imageUrl:
@@ -49,7 +65,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Weather App",
     description: "weatherDesc",
     imageUrl:
@@ -58,7 +74,7 @@ export const projects: Project[] = [
     technologies: ["React", "Weather API", "CSS", "Responsive Design"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Exchange Rate App",
     description: "exchangeRateDesc",
     imageUrl:
@@ -67,7 +83,7 @@ export const projects: Project[] = [
     technologies: ["React", "API Integration", "CSS"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Calculator App",
     description: "calculatorDesc",
     imageUrl:
@@ -76,7 +92,7 @@ export const projects: Project[] = [
     technologies: ["HTML", "CSS", "JavaScript", "React"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Memes App",
     description: "memesDesc",
     imageUrl:
@@ -85,7 +101,7 @@ export const projects: Project[] = [
     technologies: ["React", "API", "JavaScript"],
   },
   {
-    id: 9,
+    id: 10,
     title: "Clock App",
     description: "clockDesc",
     imageUrl:

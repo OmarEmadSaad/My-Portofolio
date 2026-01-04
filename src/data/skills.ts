@@ -27,6 +27,16 @@ export const skills: Skill[] = [
     category: "frameworks",
   },
   {
+    name: "React Native",
+    icon: "reactnative",
+    category: "frameworks",
+  },
+  {
+    name: "Expo",
+    icon: "expo",
+    category: "frameworks",
+  },
+  {
     name: "Next.js",
     icon: "nextjs",
     category: "frameworks",
@@ -39,6 +49,11 @@ export const skills: Skill[] = [
   {
     name: "Redux Persist",
     icon: "redux",
+    category: "frameworks",
+  },
+  {
+    name: "Zustand",
+    icon: "Zustand",
     category: "frameworks",
   },
   {
@@ -62,6 +77,16 @@ export const skills: Skill[] = [
     category: "styling",
   },
   {
+    name: "Nativewind",
+    icon: "nativewind",
+    category: "styling",
+  },
+  {
+    name: "Nativewind Ui",
+    icon: "nativewindui",
+    category: "styling",
+  },
+  {
     name: "Bootstrap",
     icon: "bootstrap",
     category: "styling",
@@ -69,6 +94,11 @@ export const skills: Skill[] = [
   {
     name: "Material Tailwind",
     icon: "material",
+    category: "styling",
+  },
+  {
+    name: "ReactNative Paper",
+    icon: "ReactNativePaper",
     category: "styling",
   },
   {

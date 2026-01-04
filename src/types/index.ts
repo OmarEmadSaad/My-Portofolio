@@ -3,12 +3,13 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
-  liveUrl: string;
+  liveUrl?: string;
+  downloadNow?: string;
   technologies: string[];
 }
 
 export interface Skill {
   name: string;
   icon: string;
-  category: 'core' | 'frameworks' | 'styling' | 'tools' | 'design';
+  category: "core" | "frameworks" | "styling" | "tools" | "design";
 }
