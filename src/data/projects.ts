@@ -8,7 +8,12 @@ export const projects: Project[] = [
     imageUrl:
       "https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     liveUrl: "https://movies-app-delta-red.vercel.app",
-    technologies: ["React", "API", "Tailwind CSS", "State Management"],
+    technologies: [
+      "React",
+      "API",
+      "Tailwind CSS",
+      "State Management,JavaScript",
+    ],
   },
   {
     id: 2,
@@ -22,6 +27,7 @@ export const projects: Project[] = [
       "Tailwind CSS",
       "API Integration",
       "Responsive Design",
+      "JavaScript",
     ],
   },
   {
@@ -36,8 +42,10 @@ export const projects: Project[] = [
       "Expo",
       "Axios",
       "Zustand",
-      "Tailwind CSS",
+      "NativeWind",
+      "React Native Paper",
       "Expo Router",
+      "TypeScript",
     ],
   },
   {
@@ -47,7 +55,7 @@ export const projects: Project[] = [
     imageUrl:
       "https://images.unsplash.com/photo-1588451732612-a1a1809500c1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8b3V0cGF0aWVudCUyMG1hbmFnbWVudHxlbnwwfHwwfHx8MA%3D%3D",
     liveUrl: "https://osm-app.vercel.app",
-    technologies: ["React", "Tailwind CSS", "Json Server", "REST API"],
+    technologies: ["React", "JavaScript", "CSS", "Json Server", "REST API"],
   },
   {
     id: 5,
@@ -58,7 +66,7 @@ export const projects: Project[] = [
     liveUrl: "https://shopingapp-ten.vercel.app",
     technologies: [
       "React",
-      "Context",
+      "Context api",
       "Json Server",
       "Tailwind CSS",
       "API Integration",
@@ -71,7 +79,7 @@ export const projects: Project[] = [
     imageUrl:
       "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     liveUrl: "https://weather-app-hazel-one-59.vercel.app",
-    technologies: ["React", "Weather API", "CSS", "Responsive Design"],
+    technologies: ["JavaScript", "Weather API", "CSS", "Responsive Design"],
   },
   {
     id: 7,
@@ -80,7 +88,7 @@ export const projects: Project[] = [
     imageUrl:
       "https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     liveUrl: "https://exchnage-rate.vercel.app",
-    technologies: ["React", "API Integration", "CSS"],
+    technologies: ["JavaScript", "API Integration", "CSS"],
   },
   {
     id: 8,
@@ -89,7 +97,7 @@ export const projects: Project[] = [
     imageUrl:
       "https://img.designideas.pics/wp-content/uploads/formidable/13/12-15.jpg?strip=all&lossy=1&webp=82&avif=82&ssl=1&fit=1082,1050",
     liveUrl: "https://calculator-app-silk-two.vercel.app",
-    technologies: ["HTML", "CSS", "JavaScript", "React"],
+    technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     id: 9,
@@ -98,7 +106,7 @@ export const projects: Project[] = [
     imageUrl:
       "https://play-lh.googleusercontent.com/jcbkTJ1CAmJ3eydoz0Fe3o9CKI3UmwxrkDRUKsCY-hiSkBPnUFNrhLRS3usYfuH-BPs=w240-h480-rw",
     liveUrl: "https://memes-wine.vercel.app",
-    technologies: ["React", "API", "JavaScript"],
+    technologies: ["HTML", "CSS", "API", "JavaScript"],
   },
   {
     id: 10,

@@ -10,7 +10,7 @@ const Hero = () => {
   // Typewriter logic
   const textLines = [
     t("hero.greeting"), // Hello, I'm
-    "Omar Emad",
+    t("hero.Name"),
     t("hero.role"), // Frontend & Mobile Developer
   ];
 

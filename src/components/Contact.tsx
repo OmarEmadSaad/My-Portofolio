@@ -59,7 +59,6 @@ const Contact = () => {
       }
     }
   };
-
   const contactInfo = [
     {
       icon: (
@@ -72,6 +71,12 @@ const Contact = () => {
         <Phone className="text-primary-600 dark:text-primary-400" size={24} />
       ),
       text: "+20 111 277 4155",
+    },
+    {
+      icon: (
+        <Phone className="text-primary-600 dark:text-primary-400" size={24} />
+      ),
+      text: "+20 155 382 6299",
     },
     {
       icon: (

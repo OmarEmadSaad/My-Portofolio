@@ -77,6 +77,11 @@ export const skills: Skill[] = [
     category: "styling",
   },
   {
+    name: "Framer Motion",
+    icon: "tailwind",
+    category: "styling",
+  },
+  {
     name: "Nativewind",
     icon: "nativewind",
     category: "styling",
@@ -144,6 +149,11 @@ export const skills: Skill[] = [
   {
     name: "firebase",
     icon: "firebase",
+    category: "tools",
+  },
+  {
+    name: "Json Server",
+    icon: "JsonServer",
     category: "tools",
   },
   {

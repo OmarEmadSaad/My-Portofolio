@@ -8,12 +8,13 @@
   },
   "hero": {
     "greeting": "Hello, I'm",
+    "Name": "Omar Emad",
     "role": "Frontend & mobile Developer",
     "cta": "View My Work"
   },
   "about": {
     "title": "About Me",
-    "summary": "As a passionate Frontend Developer, I specialize in building responsive, user-friendly web applications. With 3 years of hands-on experience and a solid foundation in modern web technologies, I transform design concepts into seamless, interactive digital experiences. I focus on writing clean, efficient, and maintainable code while staying up to date with emerging trends and best practices in web development.I have strong time-management skills and have worked as a freelancer for over one year. I also completed a 4-month on-site internship at Goo-Wed Software Company in Giza, followed by a 6-month full-time role at Dr.Code Software Company in Giza, where I delivered high-quality projects on time and collaborated effectively with clients and teams.",
+    "summary": "As a passionate Frontend Developer, I specialize in building responsive, user-friendly web applications. With 3+ years of hands-on experience and a solid foundation in modern web technologies, I transform design concepts into seamless, interactive digital experiences. I focus on writing clean, efficient, and maintainable code while staying up to date with emerging trends and best practices in web development.I have strong time-management skills and have worked as a freelancer for over one year. I also completed a 4-month on-site internship at Goo-Wed Software Company in Giza, followed by a 6-month full-time role at Dr.Code Software Company in Giza, where I delivered high-quality projects on time and collaborated effectively with clients and teams.",
     "downloadCV": "Download CV"
   },
   "skills": {
@@ -64,7 +65,7 @@
     "errorMessage": "An error occurred. Please try again."
   },
   "footer": {
-    "copyright": "© 2025 Omar Emad. All rights reserved.",
+    "copyright": "© Omar Emad. All rights reserved.",
     "madeWith": "Made with React & Framer Motion"
   },
   "theme": {
