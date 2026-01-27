@@ -36,7 +36,9 @@ export const projects: Project[] = [
     description: "goodNewsDesc",
     imageUrl:
       "https://images.pexels.com/photos/4843087/pexels-photo-4843087.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    downloadNow: "https://expo.dev/artifacts/eas/2PcYLXf8xHqSYNjhtqDMCK.apk", // ← نقلت الـ APK هنا للـ download
+    downloadNow:
+      "https://drive.google.com/uc?export=download&id=10hXMOGUYcePHvOUfDFYZgoLJTYb4PUQE",
+    //https://expo.dev/artifacts/eas/jUkg4cqV5ieSwkud1Dcvis.apk
     technologies: [
       "React Native",
       "Expo",
