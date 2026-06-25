@@ -1,25 +1,68 @@
 {
+  "meta": {
+    "title": "Omar Emad | Front End Developer & Full Stack Engineer",
+    "titleHome": "Omar Emad | Front End Developer & Full Stack Engineer in Cairo, Egypt",
+    "description": "Omar Emad is a Front End Developer & Full Stack Engineer in Cairo, Egypt — a React expert, Next.js developer and React Native specialist building fast, SEO-friendly web apps and mobile applications.",
+    "ogTitle": "Omar Emad — Front End Developer & Full Stack Engineer",
+    "ogDescription": "React expert, Next.js developer and React Native mobile app specialist building fast, modern web & mobile experiences from Cairo, Egypt.",
+    "keywords": "Omar Emad, Omar Emad Front End, Omar Emad Full Stack, Omar Mobile Dev, Front End Developer, Full Stack Engineer, Software Engineer, Mobile Application Developer, React Expert, Next.js Developer, React Native Specialist, React Developer, Frontend Developer Cairo, Web Developer Egypt",
+    "ogImageAlt": "Omar Emad — Front End Developer & Full Stack Engineer"
+  },
   "header": {
     "home": "Home",
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "skipToContent": "Skip to main content",
+    "toggleTheme": "Toggle dark mode",
+    "toggleLanguage": "Switch to Arabic",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "greeting": "Hello, I'm",
-    "Name": "Omar Emad",
-    "role": "Frontend & mobile Developer",
-    "cta": "View My Work"
+    "name": "Omar Emad",
+    "role": "Front End Developer & Full Stack Engineer",
+    "tagline": "React Expert · Next.js Developer · React Native Mobile App Specialist · Software Engineer based in Cairo, Egypt",
+    "roles": [
+      "React Expert",
+      "Next.js Developer",
+      "React Native Specialist",
+      "Mobile Application Developer",
+      "Software Engineer"
+    ],
+    "cta": "View My Work",
+    "contactCta": "Hire Me",
+    "imageAlt": "Portrait of Omar Emad, Front End Developer and Full Stack Engineer"
   },
   "about": {
-    "title": "About Me",
-    "summary": "As a passionate Frontend Developer, I specialize in building responsive, user-friendly web applications. With 3+ years of hands-on experience and a solid foundation in modern web technologies, I transform design concepts into seamless, interactive digital experiences. I focus on writing clean, efficient, and maintainable code while staying up to date with emerging trends and best practices in web development.I have strong time-management skills and have worked as a freelancer for over one year. I also completed a 4-month on-site internship at Goo-Wed Software Company in Giza, followed by a 6-month full-time role at Dr.Code Software Company in Giza, where I delivered high-quality projects on time and collaborated effectively with clients and teams.",
+    "title": "About Omar Emad",
+    "summary": "I'm Omar Emad, a Front End Developer and Full Stack Engineer based in Cairo, Egypt, with 3+ years of hands-on experience building responsive, user-friendly web and mobile applications. As a React expert and Next.js developer, I turn design concepts into seamless, high-performance digital experiences, and as a React Native specialist I ship cross-platform mobile apps. I write clean, efficient, maintainable code and stay current with modern best practices in web and mobile development. I have strong time-management skills, freelanced for over a year, completed a 4-month on-site internship at Goo-Wed Software in Giza, and worked 6 months full-time at Dr.Code Software in Giza, delivering high-quality projects on time and collaborating effectively with clients and teams.",
     "downloadCV": "Download CV"
+  },
+  "services": {
+    "title": "What I Do",
+    "subtitle": "End-to-end web and mobile development services",
+    "items": {
+      "frontend": {
+        "title": "Front End Development",
+        "desc": "Pixel-perfect, accessible and responsive interfaces with React, Next.js, TypeScript and Tailwind CSS."
+      },
+      "fullstack": {
+        "title": "Full Stack Engineering",
+        "desc": "End-to-end web apps with REST APIs, authentication, dashboards and SEO-optimized server rendering."
+      },
+      "mobile": {
+        "title": "Mobile App Development",
+        "desc": "Cross-platform mobile applications built with React Native and Expo for Android and iOS."
+      }
+    }
   },
   "skills": {
     "title": "Technical Skills",
     "categories": {
+      "all": "All",
       "core": "Core Technologies",
       "frameworks": "Frameworks & Libraries",
       "styling": "UI/Styling",
@@ -40,33 +83,39 @@
     "english": "English: B2–C1"
   },
   "projects": {
-    "title": "Projects",
+    "title": "Featured Projects",
+    "subtitle": "A selection of web and mobile applications built by Omar Emad with React, Next.js and React Native.",
     "viewLive": "View Live",
     "downloadNow": "Download Now",
     "viewCode": "View Code",
+    "altSuffix": "screenshot — built by Omar Emad",
     "calculatorDesc": "A clean, functional calculator with basic mathematical operations and a responsive design that works across all devices.",
     "clockDesc": "A minimalist clock application displaying current time with a stylish interface and animated elements.",
     "exchangeRateDesc": "Real-time currency exchange rate application with conversion features and historical rate tracking.",
     "weatherDesc": "Weather forecasting application with current conditions, daily forecasts, and location-based weather data.",
     "memesDesc": "A fun application for browsing and sharing popular memes with categorization and search functionality.",
-    "moviesDesc": "Comprehensive movies and series application with search, filtering, and detailed information about films and TV shows.",
-    "ecommerceDesc": "Full-featured e-commerce platform with product catalog, shopping cart, user authentication, checkout process, and includes an admin dashboard.",
-    "outpatientDesc": "An outpatient management system that allows patients to book and cancel appointments, chat with doctors,and includes an admin,doctor,patient dashboard and lets doctors manage daily schedules.",
-    "marketDesc": "A comprehensive online marketplace built with Next.js, allowing users to browse products, add them to a cart, and complete purchases seamlessly. It includes an admin dashboard for adding, editing, or deleting products, viewing the total number of users, identifying the last user who logged in, and tracking the latest product added, with a responsive design and modern user interface.",
-    "goodNewsDesc": "A mobile news reader app built with React Native and Expo, featuring real-time headlines from NewsAPI, favorites management, and smooth navigation with tabs."
+    "moviesDesc": "Comprehensive movies and series application built with React, featuring search, filtering, and detailed information about films and TV shows.",
+    "ecommerceDesc": "Full-featured e-commerce platform with product catalog, shopping cart, user authentication, checkout process, and an admin dashboard.",
+    "outpatientDesc": "An outpatient management system that lets patients book and cancel appointments, chat with doctors, and includes admin, doctor and patient dashboards with daily schedule management.",
+    "marketDesc": "A comprehensive online marketplace built with Next.js, letting users browse products, add them to a cart, and complete purchases seamlessly, with an admin dashboard, user analytics, a responsive design and a modern UI.",
+    "goodNewsDesc": "A mobile news reader app built with React Native and Expo, featuring real-time headlines from NewsAPI, favorites management, and smooth tab navigation."
   },
   "contact": {
-    "title": "Contact Me",
+    "title": "Contact Omar Emad",
+    "subtitle": "Have a project in mind? Let's build something great together.",
     "nameLabel": "Name",
     "emailLabel": "Email",
     "messageLabel": "Message",
     "submitButton": "Send Message",
+    "sending": "Sending…",
     "successMessage": "Message sent successfully!",
-    "errorMessage": "An error occurred. Please try again."
+    "errorMessage": "An error occurred. Please try again.",
+    "location": "Cairo, Egypt"
   },
   "footer": {
     "copyright": "© Omar Emad. All rights reserved.",
-    "madeWith": "Made with React & Framer Motion"
+    "madeWith": "Built with Next.js, React & Tailwind CSS",
+    "role": "Front End Developer & Full Stack Engineer"
   },
   "theme": {
     "light": "Light",

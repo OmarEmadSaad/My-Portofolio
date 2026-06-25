@@ -1,152 +1,112 @@
-import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowDown } from "lucide-react";
-import { useState, useEffect } from "react";
+import type { Locale } from "@/i18n/config";
+import type { Dictionary } from "@/i18n/dictionaries";
+import Typewriter from "./Typewriter";
 
-const Hero = () => {
-  const { t, i18n } = useTranslation();
-  const isRTL = i18n.language === "ar";
+type Props = { dict: Dictionary; locale: Locale };
 
-  // Typewriter logic
-  const textLines = [
-    t("hero.greeting"), // Hello, I'm
-    t("hero.Name"),
-    t("hero.role"), // Frontend & Mobile Developer
-  ];
-
-  const [currentText, setCurrentText] = useState(["", "", ""]);
-  const [lineIndex, setLineIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-
-  // Reset typewriter when language changes
-  useEffect(() => {
-    setCurrentText(["", "", ""]);
-    setLineIndex(0);
-    setCharIndex(0);
-  }, [i18n.language]);
-
-  // Typewriter effect
-  useEffect(() => {
-    if (lineIndex < textLines.length) {
-      if (charIndex < textLines[lineIndex].length) {
-        const timeout = setTimeout(() => {
-          setCurrentText((prev) => {
-            const newText = [...prev];
-            newText[lineIndex] += textLines[lineIndex][charIndex];
-            return newText;
-          });
-          setCharIndex((c) => c + 1);
-        }, 45);
-        return () => clearTimeout(timeout);
-      } else {
-        const nextLineTimeout = setTimeout(() => {
-          setLineIndex((l) => l + 1);
-          setCharIndex(0);
-        }, 400);
-        return () => clearTimeout(nextLineTimeout);
-      }
-    }
-  }, [charIndex, lineIndex, textLines]);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { delayChildren: 0.3, staggerChildren: 0.2 },
-    },
-  };
+// Server Component: the above-the-fold hero ships almost zero JS. The H1/H2 are
+// static (crawlable, instant LCP); entrance motion is CSS-only and the rotating
+// role line is a tiny client island (<Typewriter />).
+const Hero = ({ dict }: Props) => {
+  const { hero } = dict;
 
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative pt-20 pb-10 overflow-hidden"
-      dir={isRTL ? "rtl" : "ltr"}
+      className="min-h-screen flex items-center justify-center relative pt-24 pb-10 overflow-hidden scroll-mt-20"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800 -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-white dark:from-gray-900 dark:to-gray-800 -z-10" />
 
       <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20">
-        <motion.div
-          className="w-full md:w-1/2 flex flex-col"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {/* Line 1 */}
-          <motion.p
-            className={`${isRTL ? "font-arabic" : ""} text-lg md:text-xl text-primary-600 dark:text-primary-400 font-medium mb-2 min-h-[32px]`}
+        <div className="w-full md:w-1/2 flex flex-col">
+          <p
+            className="animate-in text-lg md:text-xl text-primary-600 dark:text-primary-400 font-medium mb-2"
+            style={{ animationDelay: "0ms" }}
           >
-            {currentText[0]}
-          </motion.p>
+            {hero.greeting}
+          </p>
 
-          {/* Line 2 */}
-          <motion.h1
-            className={`${isRTL ? "font-arabic" : ""} text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 min-h-[50px]`}
+          <h1
+            className="animate-in text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-3"
+            style={{ animationDelay: "80ms" }}
           >
-            {currentText[1]}
-          </motion.h1>
+            {hero.name}
+          </h1>
 
-          {/* Line 3 */}
-          <motion.h2
-            className={`${isRTL ? "font-arabic" : ""} text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-6 min-h-[40px]`}
+          <h2
+            className="animate-in text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-3"
+            style={{ animationDelay: "160ms" }}
           >
-            {currentText[2]}
-          </motion.h2>
+            {hero.role}
+          </h2>
 
-          <motion.a
-            href="#projects"
-            className={`${isRTL ? "font-arabic" : ""} inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 w-fit`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          {/* Animated rotating specialties (typewriter). */}
+          <p
+            className="animate-in text-xl md:text-2xl font-semibold text-primary-600 dark:text-primary-400 mb-3 min-h-[2rem]"
+            style={{ animationDelay: "240ms" }}
           >
-            {t("hero.cta")}
-            <ArrowDown size={18} className="ml-2 rtl:mr-2 rtl:ml-0" />
-          </motion.a>
-        </motion.div>
+            <Typewriter phrases={hero.roles} />
+          </p>
 
-        {/* Image */}
-        <motion.div
-          className="w-full md:w-1/2 flex justify-center"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7 }}
-        >
+          <p
+            className="animate-in text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl"
+            style={{ animationDelay: "320ms" }}
+          >
+            {hero.tagline}
+          </p>
+
+          <div
+            className="animate-in flex flex-wrap gap-4"
+            style={{ animationDelay: "400ms" }}
+          >
+            <a
+              href="#projects"
+              className="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-600 dark:hover:bg-primary-700 text-white rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 w-fit"
+            >
+              {hero.cta}
+              <ArrowDown size={18} className="ml-2 rtl:mr-2 rtl:ml-0" aria-hidden="true" />
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center px-6 py-3 border border-primary-600 text-primary-600 dark:border-primary-400 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-gray-800 rounded-lg transition-colors duration-300 w-fit"
+            >
+              {hero.contactCta}
+            </a>
+          </div>
+        </div>
+
+        {/* Portrait — the LCP element: server-rendered, priority, not animated. */}
+        <div className="w-full md:w-1/2 flex justify-center">
           <div className="relative flex items-center justify-center mb-8 sm:mb-0">
-            <motion.div
-              className="absolute w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-full bg-gradient-to-br from-white via-white/40 to-blue-500 blur-2xl opacity-30 animate-pulse"
-              initial={{ scale: 0.9, opacity: 0.3 }}
-              animate={{ scale: 1.1, opacity: 0.5 }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
-            />
+            <div className="absolute w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-full bg-gradient-to-br from-white via-white/40 to-primary-500 blur-2xl opacity-30 -z-0 motion-safe:animate-pulse" />
             <div className="relative h-64 w-64 md:h-80 md:w-80 overflow-hidden rounded-full border-4 border-white dark:border-gray-800 shadow-xl z-10">
-              <img
+              <Image
                 src="/profile.jpeg"
-                alt="Omar Emad"
+                alt={hero.imageAlt}
+                width={320}
+                height={320}
+                priority
+                fetchPriority="high"
+                quality={60}
+                sizes="(max-width: 768px) 256px, 320px"
                 className="w-full h-full object-cover object-[center_-20px]"
               />
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
-      <motion.div
-        className="absolute bottom-10 left-0 right-0 flex justify-center"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 1.5, repeat: Infinity }}
-      >
+      <div className="absolute bottom-10 left-0 right-0 flex justify-center motion-safe:animate-bounce">
         <a
           href="#about"
           className="p-2 rounded-full bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-shadow"
+          aria-label={dict.header.about}
         >
-          <ArrowDown
-            size={20}
-            className="text-primary-600 dark:text-primary-400"
-          />
+          <ArrowDown size={20} className="text-primary-600 dark:text-primary-400" aria-hidden="true" />
         </a>
-      </motion.div>
+      </div>
     </section>
   );
 };
